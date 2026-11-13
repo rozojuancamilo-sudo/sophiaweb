@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | North Star Bakery</title>
+</head>
+<body>
+  <header>
+    <p>North Star Bakery</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Our Products</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Contact Us</h1>
+    <p>Please use this form to contact us with any questions or to arrange a preorder.</p>
+    <form action="#" method="get">
+      <p>
+        <label for="customer-name">Name:</label>
+        <input type="text" id="customer-name" name="customer_name" required>
+      </p>
+      <p>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </p>
+      <fieldset>
+        <legend>Request details</legend>
+        <p>
+          <label for="request-type">Request type:</label>
+          <select id="request-type" name="request_type" required>
+            <option value="">Choose one</option>
+            <option value="preorder">Preorder</option>
+            <option value="question">General question</option>
+          </select>
+        </p>
+        <p>
+          <label for="pickup-date">Pickup date (if ordering):</label>
+          <input type="date" id="pickup-date" name="pickup_date">
+        </p>
+        <p>
+          <label for="item-details">Item details or question (include allergy notes if any):</label>
+          <textarea id="item-details" name="item_details" rows="4" required></textarea>
+        </p>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
+    <p>Please note this is just a non working prototype and no information or request is actually sent</p>
+    <h2>Location and hours</h2>
+    <p>Address: Raumyrveien 5b, Kongsberg</p>
+    <p>Our opening hours: 07:00 to 16:00 every day, including Sundays</p>
+  </main>
+  <footer>
+    <p>North Star Bakery</p>
+  </footer>
+</body>
+</html>
