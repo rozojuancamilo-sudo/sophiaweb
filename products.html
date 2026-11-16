@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products | North Star Bakery</title>
 </head>
@@ -18,21 +20,39 @@
   </header>
   <main>
     <h1>Our Products</h1>
-    <h2>Bread</h2>
-    <p>We make bread every day, from 10NOK to 30NOK, depending on size and weight.</p>
-    <img src="bakery-bread_c.png" alt="Several crusty bread loaves on display" width="300">
-    <h2>Pastries</h2>
-    <p>Cookies, chocolate balls and other special pastries.</p>
-    <h2>Cakes</h2>
-    <p>Cakes for any occasion. Cost depends on size</p>
+    <div class="product-list">
+      <section>
+        <h2>Bread</h2>
+        <p>We make bread every day, from 10NOK to 30NOK, depending on size and weight.</p>
+        <img src="bakery-bread_c.png" alt="Several crusty bread loaves on display" width="300">
+      </section>
+      <section>
+        <h2>Pastries</h2>
+        <p>Cookies, chocolate balls and other special pastries.</p>
+      </section>
+      <section>
+        <h2>Cakes</h2>
+        <p>Cakes for any occasion. Cost depends on size</p>
+      </section>
+    </div>
     <figure>
       <img src="bakery-signature-loaf_c.png" alt="Round bread loaf" width="300">
       <figcaption>Our Signature Loaf, a fresh handmade bread.</figcaption>
     </figure>
     <p>To ask about an order, visit our <a href="contact.html">contact page</a>.</p>
+    <section class="favorite-feature" aria-labelledby="favorite-heading">
+      <h2 id="favorite-heading">Choose your favorite product</h2>
+      <label for="favorite-product">Your favorite:</label>
+      <select id="favorite-product">
+        <option value="">Choose a product</option>
+      </select>
+      <button type="button" id="save-favorite">Save Favorite</button>
+      <p id="favorite-message" role="status" aria-live="polite"></p>
+    </section>
   </main>
   <footer>
     <p>North Star Bakery</p>
   </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | North Star Bakery</title>
 </head>
@@ -19,24 +21,27 @@
   <main>
     <h1>Contact Us</h1>
     <p>Please use this form to contact us with any questions or to arrange a preorder.</p>
-    <form action="#" method="get">
+    <form action="#" method="get" id="contact-form" novalidate>
       <p>
         <label for="customer-name">Name:</label>
-        <input type="text" id="customer-name" name="customer_name" required>
+        <input type="text" id="customer-name" name="customer_name" required aria-describedby="name-error">
+        <span id="name-error" class="error" role="alert"></span>
       </p>
       <p>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required aria-describedby="email-error">
+        <span id="email-error" class="error" role="alert"></span>
       </p>
       <fieldset>
         <legend>Request details</legend>
         <p>
           <label for="request-type">Request type:</label>
-          <select id="request-type" name="request_type" required>
+          <select id="request-type" name="request_type" required aria-describedby="request-error">
             <option value="">Choose one</option>
             <option value="preorder">Preorder</option>
             <option value="question">General question</option>
           </select>
+          <span id="request-error" class="error" role="alert"></span>
         </p>
         <p>
           <label for="pickup-date">Pickup date (if ordering):</label>
@@ -44,11 +49,13 @@
         </p>
         <p>
           <label for="item-details">Item details or question (include allergy notes if any):</label>
-          <textarea id="item-details" name="item_details" rows="4" required></textarea>
+          <textarea id="item-details" name="item_details" rows="4" required aria-describedby="details-error"></textarea>
+          <span id="details-error" class="error" role="alert"></span>
         </p>
       </fieldset>
       <button type="submit">Submit</button>
     </form>
+    <p id="form-message" role="status" aria-live="polite"></p>
     <p>Please note this is just a non working prototype and no information or request is actually sent</p>
     <h2>Location and hours</h2>
     <p>Address: Raumyrveien 5b, Kongsberg</p>
@@ -57,5 +64,6 @@
   <footer>
     <p>North Star Bakery</p>
   </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>

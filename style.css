@@ -1,0 +1,183 @@
+/* North Star Bakery basic website styling */
+body {
+  margin: 0;
+  background-color: #F5F0E6;
+  color: #594535;
+  font-family: Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+}
+
+header > p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 18px 0;
+}
+
+header > img {
+  display: block;
+  margin: 0 auto 15px;
+}
+
+nav {
+  background-color: #9E3030;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 22px;
+  list-style: none;
+  margin: 0;
+  padding: 14px;
+}
+
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+nav a:hover, nav a:focus {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 18px;
+}
+
+h1 {
+  font-size: 1.7rem;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+h2 {
+  color: #355744;
+  font-size: 1.3rem;
+  margin: 28px 0 8px;
+}
+
+p {
+  margin: 8px 0 18px;
+}
+
+main img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: none;
+}
+
+picture img, main > img, figure img {
+  max-width: 300px;
+}
+
+figure {
+  margin: 24px 0;
+}
+
+figcaption {
+  font-size: 0.9rem;
+}
+
+form {
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: 9px;
+  font: inherit;
+  border: 1px solid #594535;
+  background-color: #FFFFFF;
+}
+
+fieldset {
+  border: 1px solid #594535;
+  margin: 18px 0;
+  padding: 12px;
+}
+
+button {
+  background-color: #355744;
+  color: #FFFFFF;
+  border: 0;
+  padding: 10px 20px;
+  font: inherit;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #355744;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 16px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* On small screens, product sections are stacked. */
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* On larger screens, product sections sit side by side. */
+@media (min-width: 700px) {
+  main {
+    padding: 36px 28px;
+  }
+
+  .product-list {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .product-list section {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+/* The favorite controls use our regular colors. */
+.favorite-feature {
+  max-width: 500px;
+  margin-top: 28px;
+}
+
+.favorite-feature button {
+  display: block;
+  margin-top: 12px;
+}
+
+/* Keep error messages near their fields. */
+.error {
+  display: block;
+  color: #9E3030;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.error:empty {
+  display: none;
+}
+
+#favorite-message, #form-message {
+  font-weight: bold;
+}
